@@ -26,7 +26,19 @@ Additionally, a graphical user interface powered by Next.js is planned.
 git clone https://github.com/webfryingpan/next-rpc.git
 ```
 
-2. **Launch with docker**
+2. **Configure**
+
+- Configure .env.example file
+
+Rename .env.example to .env and configure.
+
+- Configure docker-compose.yml
+
+Configure **POSTGRES_USER**, **POSTGRES_DB**, **POSTGRES_PASSWORD**.
+
+**.env file settings and database settings are must match!**
+
+3. **Launch with docker**
 
 ```bash
 docker-compose up
