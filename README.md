@@ -14,10 +14,8 @@ Additionally, a graphical user interface powered by Next.js is planned.
 
 ## Contributing
 
-Contributions are welcome! Please feel free to submit a pull request or create
-an issue for any bugs or feature requests.
+Contributions are welcome! Please feel free to submit a pull request or create an issue for any bugs or feature requests.
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for
-details.
+This project is licensed under the MIT License - see the LICENSE file for details.

@@ -1,9 +1,11 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 import { PrismaService } from 'src/prisma/prisma.service';
 import { PresetDto } from './dtos/preset.dto';
+import { IDatabaseService } from './interfaces/database-service.interface';
 
 @Injectable()
-export class DatabaseService {
+export class DatabaseService implements IDatabaseService {
+  private readonly logger = new Logger(DatabaseService.name);
   constructor(private prisma: PrismaService) {}
 
   async savePreset(obj: PresetDto): Promise<void> {
@@ -22,20 +24,24 @@ export class DatabaseService {
       activityType: obj.activityType,
     };
 
+    this.logger.log(`Saving preset ${JSON.stringify(data)}...`);
     await this.prisma.presets.create({ data });
   }
 
   async fetchById(id: number): Promise<PresetDto> {
+    this.logger.log(`Fetching preset with id ${id}...`);
     return await this.prisma.presets.findFirst({
       where: { id },
     });
   }
 
   async fetchAll(): Promise<PresetDto[]> {
+    this.logger.log('Fetching presets...');
     return await this.prisma.presets.findMany();
   }
 
   async deleteById(id: number): Promise<void> {
+    this.logger.log(`Deleting preset with id ${id}...`);
     await this.prisma.presets.delete({ where: { id } });
   }
 }
