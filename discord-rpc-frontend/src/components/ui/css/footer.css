@@ -1,0 +1,7 @@
+.footer {
+  @apply fixed bottom-0 px-16 py-5 w-screen flex items-end justify-between;
+}
+
+.creditals {
+  @apply select-none;
+}

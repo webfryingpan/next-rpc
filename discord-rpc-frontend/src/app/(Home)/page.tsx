@@ -2,7 +2,7 @@ import Link from "next/link";
 import "../global.css";
 import "./home.css";
 
-export default function Home() {
+const Home: React.FC = () => {
   return (
     <div className="container">
       <h1 className="information">
@@ -13,4 +13,6 @@ export default function Home() {
       </Link>
     </div>
   );
-}
+};
+
+export default Home;

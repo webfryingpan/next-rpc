@@ -1,11 +1,11 @@
-.home-header {
-  @apply flex justify-between mx-12 my-5;
+.header {
+  @apply flex justify-between w-screen px-16 py-5;
 }
 
 .heading {
-  @apply font-sans font-bold text-4xl ease-in-out duration-300 transition-colors hover:text-gray-300;
+  @apply select-none font-sans font-bold text-4xl ease-in-out duration-300 transition-colors hover:text-gray-400;
 }
 
 .github-icon {
-  @apply w-10 h-10 transition-colors ease-in-out duration-300 hover:text-gray-300;
+  @apply w-10 h-10 transition-colors ease-in-out duration-300 hover:text-gray-400;
 }
