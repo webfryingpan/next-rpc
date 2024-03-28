@@ -1,12 +1,12 @@
 import {
   Injectable,
-  OnModuleInit,
-  OnModuleDestroy,
   Logger,
+  OnModuleDestroy,
+  OnModuleInit,
 } from '@nestjs/common';
 import { Client } from '@xhayper/discord-rpc';
 import { DatabaseService } from 'src/database/database.service';
-import { PresetDto } from 'src/database/dtos/preset.dto';
+import { PresetDTO } from 'src/database/dto/preset.dto';
 import { IRpcService } from './interfaces/rpc-service.interface';
 
 @Injectable()
@@ -25,7 +25,7 @@ export class RpcService implements OnModuleInit, OnModuleDestroy, IRpcService {
   }
 
   async launch(id: number): Promise<void> {
-    const data: PresetDto = await this.databaseService.fetchById(id);
+    const data: PresetDTO = await this.databaseService.fetchById(id);
 
     this.rpc.clientId = data.clientId;
 

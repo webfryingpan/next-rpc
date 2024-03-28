@@ -1,6 +1,6 @@
 import { IsString } from 'class-validator';
 
-export class ParamDto {
+export class IdDTO {
   @IsString()
   id: string;
 }

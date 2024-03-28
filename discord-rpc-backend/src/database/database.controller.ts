@@ -1,29 +1,29 @@
-import { Controller, Post, Get, Body, Delete, Param } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
 import { DatabaseService } from './database.service';
-import { PresetDto } from './dtos/preset.dto';
-import { ParamDto } from './dtos/param.dto';
+import { IdDTO } from './dto/id.dto';
+import { PresetDTO } from './dto/preset.dto';
 
 @Controller('database')
 export class DatabaseController {
   constructor(private readonly databaseService: DatabaseService) {}
 
   @Post('')
-  async savePreset(@Body() body: PresetDto): Promise<void> {
+  async savePreset(@Body() body: PresetDTO): Promise<void> {
     await this.databaseService.savePreset(body);
   }
 
   @Delete(':id')
-  async deletePresetById(@Param() params: ParamDto): Promise<void> {
-    await this.databaseService.deleteById(parseInt(params.id));
+  async deletePresetById(@Param() { id }: IdDTO): Promise<void> {
+    await this.databaseService.deleteById(parseInt(id));
   }
 
   @Get('')
-  async fetchAllPresets(): Promise<PresetDto[]> {
+  async fetchAllPresets(): Promise<PresetDTO[]> {
     return await this.databaseService.fetchAll();
   }
 
   @Get(':id')
-  async fetchPresetById(@Param() params: ParamDto): Promise<PresetDto> {
-    return await this.databaseService.fetchById(parseInt(params.id));
+  async fetchPresetById(@Param() { id }: IdDTO): Promise<PresetDTO> {
+    return await this.databaseService.fetchById(parseInt(id));
   }
 }

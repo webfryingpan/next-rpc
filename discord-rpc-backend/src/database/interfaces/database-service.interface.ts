@@ -1,8 +1,8 @@
-import { PresetDto } from '../dtos/preset.dto';
+import { PresetDTO } from '../dto/preset.dto';
 
 export interface IDatabaseService {
-  savePreset(obj: PresetDto): Promise<void>;
-  fetchById(id: number): Promise<PresetDto>;
-  fetchAll(): Promise<PresetDto[]>;
+  savePreset(obj: PresetDTO): Promise<void>;
+  fetchById(id: number): Promise<PresetDTO>;
+  fetchAll(): Promise<PresetDTO[]>;
   deleteById(id: number): Promise<void>;
 }

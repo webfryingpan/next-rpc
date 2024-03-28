@@ -1,4 +1,4 @@
-import { IsString, IsEnum } from 'class-validator';
+import { IsEnum, IsString } from 'class-validator';
 
 enum ActivityType {
   Playing,
@@ -9,7 +9,7 @@ enum ActivityType {
   Competing,
 }
 
-export class PresetDto {
+export class PresetDTO {
   @IsString()
   clientId: string;
 

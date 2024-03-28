@@ -1,6 +1,6 @@
-import { Controller, Post, Param, HttpStatus, HttpCode } from '@nestjs/common';
+import { Controller, HttpCode, HttpStatus, Param, Post } from '@nestjs/common';
+import { IdDTO } from './dto/id.dto';
 import { RpcService } from './rpc.service';
-import { ParamDto } from './dtos/param.dto';
 
 @Controller('rpc')
 export class RpcController {
@@ -8,8 +8,8 @@ export class RpcController {
 
   @Post(':id')
   @HttpCode(HttpStatus.OK)
-  async launch(@Param() params: ParamDto): Promise<void> {
-    await this.rpcService.launch(parseInt(params.id));
+  async launch(@Param() { id }: IdDTO): Promise<void> {
+    await this.rpcService.launch(parseInt(id));
   }
 
   @Post('')
