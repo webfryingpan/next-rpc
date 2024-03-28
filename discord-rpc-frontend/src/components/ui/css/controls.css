@@ -1,7 +1,7 @@
 .controls {
-  @apply flex gap-x-5;
+	@apply flex gap-x-2;
 }
 
 .control {
-  @apply w-10 h-10 text-zinc-50 transition-colors duration-300 hover:text-gray-400;
+	@apply w-10 h-10 transition-opacity ease-in-out duration-200 hover:opacity-70 hover:cursor-pointer;
 }

@@ -1,11 +1,11 @@
 .container {
-  @apply flex my-32 w-4/5 text-center m-auto justify-center items-center flex-col;
+	@apply flex my-32 w-4/5 text-center m-auto justify-center items-center flex-col;
 }
 
 .information {
-  @apply text-2xl text-gray-50 font-serif font-light mb-28;
+	@apply text-2xl font-light mb-28;
 }
 
 .begin {
-  @apply text-5xl font-bold font-serif text-gray-50 transition-transform duration-200 ease-out hover:scale-125;
+	@apply text-5xl font-bold transition-transform duration-200 ease-out hover:scale-110;
 }

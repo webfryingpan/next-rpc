@@ -1,11 +1,16 @@
 .header {
-  @apply flex justify-between w-screen px-16 py-5;
+	@apply flex justify-between w-screen px-16 py-5;
+}
+
+.heading,
+.github-icon {
+	@apply transition-opacity ease-in-out duration-200 hover:opacity-70;
 }
 
 .heading {
-  @apply select-none font-sans font-bold text-4xl ease-in-out duration-300 transition-colors hover:text-gray-400;
+	@apply select-none font-bold text-4xl;
 }
 
 .github-icon {
-  @apply w-10 h-10 transition-colors ease-in-out duration-300 hover:text-gray-400;
+	@apply w-10 h-10;
 }

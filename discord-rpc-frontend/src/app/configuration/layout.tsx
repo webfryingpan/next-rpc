@@ -1,31 +1,29 @@
-import Header from "@components/ui/header";
-import Footer from "@components/ui/footer";
-import Controls from "@components/ui/controls";
+import Controls from '@components/ui/controls'
+import Footer from '@components/ui/footer'
+import Header from '@components/ui/header'
 
 export const metadata = {
-  title: "RPC configuration",
-  description: "Discord RPC configuration page.",
-};
-
-interface ConfigurationLayoutProps {
-  children: React.ReactNode;
+	title: 'RPC configuration',
+	description: 'Discord RPC configuration page.',
 }
 
-const ConfigurationLayout: React.FC<ConfigurationLayoutProps> = ({
-  children,
-}) => {
-  return (
-    <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.png" sizes="any" />
-      </head>
-      <body>
-        <Header />
-        <main>{children}</main>
-        <Footer controls={<Controls />} />
-      </body>
-    </html>
-  );
-};
+interface ConfigurationLayoutProps {
+	children: React.ReactNode
+}
 
-export default ConfigurationLayout;
+const ConfigurationLayout: React.FC<ConfigurationLayoutProps> = ({ children }) => {
+	return (
+		<html lang='en'>
+			<head>
+				<link rel='icon' href='/favicon.png' sizes='any' />
+			</head>
+			<body>
+				<Header controls={<Controls />} />
+				<main>{children}</main>
+				<Footer />
+			</body>
+		</html>
+	)
+}
+
+export default ConfigurationLayout
