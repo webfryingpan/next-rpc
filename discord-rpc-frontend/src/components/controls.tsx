@@ -1,6 +1,6 @@
 import { faPlay, faStop } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import './css/controls.css'
+import '@styles/components/controls.css'
 
 const Controls: React.FC = () => {
 	return (

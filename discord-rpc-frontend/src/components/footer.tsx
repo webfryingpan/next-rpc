@@ -1,6 +1,6 @@
-import './css/footer.css'
+import '@styles/components/footer.css'
 
-const Footer: React.FC = () => {
+const Footer = () => {
 	return (
 		<footer className='footer'>
 			<p className='credits'>developed by: webfryingpan</p>

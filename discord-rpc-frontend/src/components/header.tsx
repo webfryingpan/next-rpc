@@ -1,7 +1,7 @@
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import Link from 'next/link'
-import './css/header.css'
+import '@styles/components/header.css'
+import { Link } from 'react-router-dom'
 
 interface HeaderProps {
 	controls?: React.ReactNode
@@ -11,10 +11,10 @@ const Header: React.FC<HeaderProps> = ({ controls }) => {
 	return (
 		<header className='header'>
 			<div style={{ display: 'flex', columnGap: '20px' }}>
-				<Link href='/'>
+				<Link to='/'>
 					<h1 className='heading'>Discord RPC</h1>
 				</Link>
-				<Link href='https://github.com/webfryingpan/next-rpc' target='blank'>
+				<Link to='https://github.com/webfryingpan/next-rpc' target='blank'>
 					<FontAwesomeIcon icon={faGithub} className='github-icon' />
 				</Link>
 			</div>
