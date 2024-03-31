@@ -4,10 +4,10 @@ import '@styles/components/header.css'
 import { Link } from 'react-router-dom'
 
 interface HeaderProps {
-	controls?: React.ReactNode
+	children?: React.ReactNode
 }
 
-const Header: React.FC<HeaderProps> = ({ controls }) => {
+const Header: React.FC<HeaderProps> = ({ children }) => {
 	return (
 		<header className='header'>
 			<div style={{ display: 'flex', columnGap: '20px' }}>
@@ -18,7 +18,7 @@ const Header: React.FC<HeaderProps> = ({ controls }) => {
 					<FontAwesomeIcon className='github-icon' icon={faGithub} />
 				</Link>
 			</div>
-			{controls}
+			{children}
 		</header>
 	)
 }

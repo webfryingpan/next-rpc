@@ -5,7 +5,9 @@ import Header from '@components/header'
 const Configuration = () => {
 	return (
 		<>
-			<Header controls={<Controls />} />
+			<Header>
+				<Controls />
+			</Header>
 			<h1>Not implemented</h1>
 			<Footer />
 		</>
