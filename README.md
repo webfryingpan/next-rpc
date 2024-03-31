@@ -2,15 +2,14 @@
 
 ## Description
 
-This project combines NestJS with Discord RPC integration and Prisma ORM.
-Additionally, a graphical user interface powered by React is planned.
+This project is using NestJS, React and Prisma ORM.
 
 ## Features
 
 - **Discord RPC Integration**: Connect and display custom statuses on Discord.
 - **Database Support with Prisma**: Using Prisma ORM for efficient data handling.
 - **Custom Preset Management**: Create and manage presets for quick status changes.
-- **React GUI Integration (Planned)**: Develop a GUI using Next.js.
+- **React GUI Integration (Planned)**: Develop a GUI using React.
 
 ## Contributing
 
