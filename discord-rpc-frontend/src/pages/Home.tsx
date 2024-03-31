@@ -4,7 +4,7 @@ import '@styles/global.css'
 import '@styles/pages/home.css'
 import { Link } from 'react-router-dom'
 
-const Home = () => {
+const Home: React.FC = () => {
 	return (
 		<>
 			<Header />

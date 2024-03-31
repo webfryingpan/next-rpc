@@ -2,7 +2,7 @@ import Controls from '@components/controls'
 import Footer from '@components/footer'
 import Header from '@components/header'
 
-const Configuration = () => {
+const Configuration: React.FC = () => {
 	return (
 		<>
 			<Header>

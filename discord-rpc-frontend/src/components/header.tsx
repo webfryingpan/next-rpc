@@ -3,11 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import '@styles/components/header.css'
 import { Link } from 'react-router-dom'
 
-interface HeaderProps {
-	children?: React.ReactNode
-}
-
-const Header: React.FC<HeaderProps> = ({ children }) => {
+const Header: React.FC<React.PropsWithChildren> = ({ children }) => {
 	return (
 		<header className='header'>
 			<div style={{ display: 'flex', columnGap: '20px' }}>
