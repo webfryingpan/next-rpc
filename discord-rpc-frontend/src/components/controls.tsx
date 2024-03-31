@@ -5,8 +5,8 @@ import '@styles/components/controls.css'
 const Controls: React.FC = () => {
 	return (
 		<div className='controls'>
-			<FontAwesomeIcon icon={faPlay} className='control' />
-			<FontAwesomeIcon icon={faStop} className='control' />
+			<FontAwesomeIcon className='control' icon={faPlay} />
+			<FontAwesomeIcon className='control' icon={faStop} />
 		</div>
 	)
 }

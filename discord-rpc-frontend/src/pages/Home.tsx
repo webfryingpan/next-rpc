@@ -12,8 +12,8 @@ const Home = () => {
 				<h1 className='information'>
 					This Discord RPC GUI is developed by <strong>webfryingpan</strong>
 				</h1>
-				<Link to='configuration' className='begin'>
-					Let's begin!
+				<Link className='begin' to='configuration'>
+					Let`s begin!
 				</Link>
 			</div>
 			<Footer />

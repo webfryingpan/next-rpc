@@ -1,13 +1,8 @@
-import {
-  Injectable,
-  Logger,
-  OnModuleDestroy,
-  OnModuleInit,
-} from '@nestjs/common';
-import { Client } from '@xhayper/discord-rpc';
-import { DatabaseService } from 'src/database/database.service';
-import { PresetDTO } from 'src/database/dto/preset.dto';
-import { IRpcService } from './interfaces/rpc-service.interface';
+import { Injectable, Logger, OnModuleDestroy, OnModuleInit } from "@nestjs/common";
+import { Client } from "@xhayper/discord-rpc";
+import { DatabaseService } from "src/database/database.service";
+import { PresetDTO } from "src/database/dto/preset.dto";
+import { IRpcService } from "./interfaces/rpc-service.interface";
 
 @Injectable()
 export class RpcService implements OnModuleInit, OnModuleDestroy, IRpcService {
@@ -17,7 +12,7 @@ export class RpcService implements OnModuleInit, OnModuleDestroy, IRpcService {
   constructor(private readonly databaseService: DatabaseService) {}
 
   onModuleInit() {
-    this.rpc = new Client({ clientId: '' });
+    this.rpc = new Client({ clientId: "" });
   }
 
   onModuleDestroy() {
@@ -45,14 +40,12 @@ export class RpcService implements OnModuleInit, OnModuleDestroy, IRpcService {
       type: data.activityType,
     };
 
-    this.logger.log(
-      `Activating RPC with these params: ${JSON.stringify(activity)}...`,
-    );
+    this.logger.log(`Activating RPC with these params: ${JSON.stringify(activity)}...`);
     this.rpc.user.setActivity(activity);
   }
 
   stop(): void {
-    this.logger.log('Deactivating RPC...');
+    this.logger.log("Deactivating RPC...");
     this.rpc.destroy();
   }
 }

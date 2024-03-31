@@ -14,8 +14,8 @@ const Header: React.FC<HeaderProps> = ({ controls }) => {
 				<Link to='/'>
 					<h1 className='heading'>Discord RPC</h1>
 				</Link>
-				<Link to='https://github.com/webfryingpan/next-rpc' target='blank'>
-					<FontAwesomeIcon icon={faGithub} className='github-icon' />
+				<Link target='blank' to='https://github.com/webfryingpan/next-rpc'>
+					<FontAwesomeIcon className='github-icon' icon={faGithub} />
 				</Link>
 			</div>
 			{controls}

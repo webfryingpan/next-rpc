@@ -1,4 +1,4 @@
-import { PresetDTO } from '../dto/preset.dto';
+import { PresetDTO } from "../dto/preset.dto";
 
 export interface IDatabaseService {
   savePreset(obj: PresetDTO): Promise<void>;

@@ -1,7 +1,7 @@
-import { Injectable, Logger } from '@nestjs/common';
-import { PrismaService } from 'src/prisma/prisma.service';
-import { PresetDTO } from './dto/preset.dto';
-import { IDatabaseService } from './interfaces/database-service.interface';
+import { Injectable, Logger } from "@nestjs/common";
+import { PrismaService } from "src/prisma/prisma.service";
+import { PresetDTO } from "./dto/preset.dto";
+import { IDatabaseService } from "./interfaces/database-service.interface";
 
 @Injectable()
 export class DatabaseService implements IDatabaseService {
@@ -36,7 +36,7 @@ export class DatabaseService implements IDatabaseService {
   }
 
   async fetchAll(): Promise<PresetDTO[]> {
-    this.logger.log('Fetching presets...');
+    this.logger.log("Fetching presets...");
     return await this.prisma.presets.findMany();
   }
 
