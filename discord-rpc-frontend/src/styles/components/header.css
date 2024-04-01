@@ -12,5 +12,5 @@
 }
 
 .github-icon {
-	@apply w-10 h-10;
+	@apply size-10;
 }

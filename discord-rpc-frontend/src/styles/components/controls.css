@@ -3,5 +3,5 @@
 }
 
 .control {
-	@apply w-10 h-10 transition-opacity ease-in-out duration-200 hover:opacity-70 hover:cursor-pointer;
+	@apply size-10 transition-opacity ease-in-out duration-200 hover:opacity-70 hover:cursor-pointer;
 }
