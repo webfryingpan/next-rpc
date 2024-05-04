@@ -1,0 +1,7 @@
+.submit {
+  @apply bg-black outline-none font-semibold rounded-md p-3 hover:scale-110 transition-transform;
+}
+
+.form {
+  @apply gap-y-5 p-12 max-w-[700px] flex flex-col flex-grow-[3];
+}

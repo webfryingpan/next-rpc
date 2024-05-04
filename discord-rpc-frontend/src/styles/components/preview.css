@@ -1,0 +1,35 @@
+.preview {
+  @apply grid grid-cols-[120px,1fr] grid-rows-[140px,1fr] p-12;
+}
+
+.text-details {
+  @apply ml-10 text-black;
+}
+
+div {
+  word-break: break-all;
+}
+
+.buttons {
+  @apply col-span-2;
+}
+
+.images {
+  @apply relative h-[120px];
+}
+
+.lg {
+  @apply size-[120px] rounded-md bg-black;
+}
+
+.sm {
+  @apply absolute bg-black bottom-0 right-0 size-[60px] rounded-full border-zinc-100 border-solid border-4 translate-x-5 translate-y-5;
+}
+
+.buttons {
+  @apply flex flex-col gap-y-5;
+}
+
+.btn {
+  @apply w-full h-10 rounded-md bg-black hover:scale-110 transition-transform text-center flex items-center justify-center cursor-pointer select-none;
+}

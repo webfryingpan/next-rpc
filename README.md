@@ -1,15 +1,46 @@
-# Discord RPC
+# Discord RPC Control
 
 ## Description
 
-This project is using NestJS, React and Prisma ORM.
+This project provides tools to control Discord Rich Presence (RPC) using NestJS, React, and Prisma ORM.
 
 ## Features
 
-- **Discord RPC Integration**: Connect and display custom statuses on Discord.
+- **Discord RPC Integration**: Connect and display custom statuses in Discord.
 - **Database Support with Prisma**: Using Prisma ORM for efficient data handling.
 - **Custom Preset Management**: Create and manage presets for quick status changes.
-- **React GUI Integration (Planned)**: Develop a GUI using React.
+- **React GUI**: GUI using React.
+
+## Installation
+
+### Clone repo & Install dependencies
+
+Install PostgreSQL, bun(because it's the best thing)
+
+```bash
+git clone https://github.com/webfryingpan/next-rpc.git
+cd next-rpc/discord-rpc-backend # Install dependencies for backend
+bun instal
+cd ../discord-rpc-frontend # Install dependencies for frontend
+bun install
+```
+
+### Configure .env file
+
+Copy `.env.example` to `.env` and update the environment variables according to your settings.
+
+Make sure to use `identical` port for `backend` and `frontend`
+
+### Start the project
+
+```bash
+cd next-rpc/discord-rpc-backend # Run backend
+bun run start
+cd ../discord-rpc-frontend # Run frontend
+bun run dev
+```
+
+Open <http://localhost:5173> in your browser.
 
 ## Contributing
 

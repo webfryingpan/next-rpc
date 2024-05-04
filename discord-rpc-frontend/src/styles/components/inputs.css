@@ -1,0 +1,21 @@
+.text-input,
+.key-input {
+  @apply bg-transparent outline-none border-b-2 border-solid border-black  text-black p-5 grow;
+}
+
+.text-input::-webkit-outer-spin-button,
+.text-input::-webkit-inner-spin-button {
+  @apply appearance-none;
+}
+
+.key-input {
+  @apply appearance-none text-black;
+}
+
+option {
+  @apply bg-black text-zinc-100;
+}
+
+.double-input {
+  @apply flex justify-between gap-x-5;
+}

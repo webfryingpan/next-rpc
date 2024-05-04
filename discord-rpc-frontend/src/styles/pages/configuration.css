@@ -1,0 +1,8 @@
+.wrapper {
+  @apply grid grid-cols-2 gap-x-36 mt-20 mx-40 justify-between;
+}
+
+.form,
+.preview {
+  @apply bg-zinc-100 rounded-lg;
+}

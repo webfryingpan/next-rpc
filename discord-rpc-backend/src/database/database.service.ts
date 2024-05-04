@@ -9,39 +9,24 @@ export class DatabaseService implements IDatabaseService {
   constructor(private prisma: PrismaService) {}
 
   async savePreset(obj: PresetDTO): Promise<void> {
-    const data = {
-      clientId: obj.clientId,
-      state: obj.state,
-      details: obj.details,
-      largeImageKey: obj.largeImageText,
-      largeImageText: obj.largeImageText,
-      smallImageKey: obj.smallImageKey,
-      smallImageText: obj.smallImageText,
-      buttonOneLabel: obj.buttonOneLabel,
-      buttonOneUrl: obj.buttonOneUrl,
-      buttonTwoLabel: obj.buttonTwoLabel,
-      buttonTwoUrl: obj.buttonTwoUrl,
-      activityType: obj.activityType,
-    };
-
-    this.logger.log(`Saving preset ${JSON.stringify(data)}...`);
-    await this.prisma.presets.create({ data });
+    this.logger.log(`Saving preset ${JSON.stringify(obj)}...`);
+    await this.prisma.presets.create({ data: obj });
   }
 
   async fetchById(id: number): Promise<PresetDTO> {
-    this.logger.log(`Fetching preset with id ${id}...`);
+    this.logger.log(`Fetching preset with id ${Number(id)}...`);
     return await this.prisma.presets.findFirst({
       where: { id },
     });
   }
 
+  async deleteById(id: number): Promise<void> {
+    this.logger.log(`Deleting preset with id ${Number(id)}...`);
+    await this.prisma.presets.delete({ where: { id } });
+  }
+
   async fetchAll(): Promise<PresetDTO[]> {
     this.logger.log("Fetching presets...");
     return await this.prisma.presets.findMany();
-  }
-
-  async deleteById(id: number): Promise<void> {
-    this.logger.log(`Deleting preset with id ${id}...`);
-    await this.prisma.presets.delete({ where: { id } });
   }
 }

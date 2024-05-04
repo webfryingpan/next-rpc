@@ -27,17 +27,11 @@ export class RpcService implements OnModuleInit, OnModuleDestroy, IRpcService {
     await this.rpc.login();
 
     const activity = {
-      state: data.state,
-      details: data.details,
-      largeImageKey: data.largeImageKey,
-      largeImageText: data.largeImageText,
-      smallImageKey: data.smallImageKey,
-      smallImageText: data.smallImageText,
+      ...data,
       buttons: [
         { label: data.buttonOneLabel, url: data.buttonOneUrl },
         { label: data.buttonTwoLabel, url: data.buttonTwoUrl },
       ],
-      type: data.activityType,
     };
 
     this.logger.log(`Activating RPC with these params: ${JSON.stringify(activity)}...`);

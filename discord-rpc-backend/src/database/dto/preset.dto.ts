@@ -5,8 +5,6 @@ enum ActivityType {
   Streaming,
   Listening,
   Watching,
-  Custom,
-  Competing,
 }
 
 export class PresetDTO {
